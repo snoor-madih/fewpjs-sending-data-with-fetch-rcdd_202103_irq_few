@@ -5,7 +5,7 @@ function submitData(name, email) {
         email: email
     };
 
-    let configObject = {
+    let config = {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -14,7 +14,7 @@ function submitData(name, email) {
         body: JSON.stringify(formData)
     };
 
-    return fetch("http://localhost:3000/users", configObjec)
+    return fetch("http://localhost:3000/users", configObj)
         .then(function(response) {
           return response.json();
         })
